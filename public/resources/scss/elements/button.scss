@@ -1,0 +1,69 @@
+/*
+
+Stylesheet for Button elements across the platform.
+Not to be compiled on its own; imported by main.scss
+Matthew Brewer - 7/24/2019
+
+*/
+
+/*
+Standard Button
+Button with no background color and no border.
+*/
+
+.button {
+    color: $theme-primary;
+
+    text-decoration: none;
+    display: inline-block;
+
+    line-height: 45px;
+    height: 45px;
+    margin: 10px 15px 10px 0;
+    padding: 2px 32px;
+
+    border-radius: 2px;
+    border: none;
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    &:hover {
+        transition: 0.2s linear;
+        background-color: $theme-primary-faint;
+    }
+
+    &:active {
+        transition: 0.2s linear;
+        background-color: $theme-primary-very-light;
+    }
+}
+
+button.button, input[type=submit].button {
+    margin: 0;
+    height: 49px !important;
+}
+
+/*
+Contained Button
+Button with background that matches the $theme-primary color
+*/
+
+.button.contained {
+    color: $text-white;
+    background-color: $theme-primary;
+
+    &:hover {
+        transition: 0.2s linear;
+        background-color: $theme-primary-light;
+    }
+
+    &:active {
+        transition: 0.1s linear;
+        background-color: $theme-primary-dark;
+    }
+}

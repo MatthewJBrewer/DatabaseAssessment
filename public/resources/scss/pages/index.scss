@@ -1,0 +1,33 @@
+/*
+
+Index Page SCSS File
+
+This is the SCSS file representing any styles unique to the index (landing) page.
+
+Matthew Brewer - 7/24/2019
+
+*/
+
+/*
+Index Body - give the landing page a unique appearance
+*/
+
+#index-body {
+    background-color: $background-dark-grey;
+}
+
+/*
+Landing Page Form
+*/
+
+#index-form-container {
+    max-width: 650px;
+
+    padding: 40px;
+
+    margin: 36px auto 36px auto;
+    background-color: $background-light;
+
+    border: 1px solid $light-grey;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05),  0 2px 8px rgba(0, 0, 0, 0.1);
+}

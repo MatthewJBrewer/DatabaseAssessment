@@ -1,0 +1,18 @@
+/*
+
+Clearfix Mixin
+Fixes the issue where the container of floated elements does not expand to include floated elements.
+Matthew Brewer - 4/25/2018
+
+*/
+
+@mixin clearfix {
+    overflow: auto;
+
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }   
+}
+

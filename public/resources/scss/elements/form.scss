@@ -1,0 +1,204 @@
+/*
+Form Stylesheet
+Stylesheet directly responsible for forms and their inputs.
+Not to be compiled on its own; compiled by main. scss.
+Matthew Brewer 7/24/2019
+*/
+
+
+.standard-form {
+
+}
+
+/*
+Error Message
+*/
+
+.standard-form > .message {
+    background-color: #10893E;
+    padding: 18px;
+    margin: 0 0 24px 0;
+
+    border-radius: 3px;
+}
+
+.standard-form .message.error {
+    background-color: #FF4343;
+}
+
+.standard-form .message > p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFF;
+
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Form Title
+*/
+
+.standard-form > #title-container {
+    margin: 0 0 32px 0;
+}
+
+.standard-form > #title-container > h1 {
+    font-weight: 400;
+    font-size: 42px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.standard-form > #title-container > h2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $text-grey;
+
+    margin: 0;
+    margin-bottom: 32px;
+
+}
+
+/*
+Containers
+*/
+
+.standard-form .fieldset {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.standard-form .fieldset.with-margin {
+    margin-bottom: 32px;
+}
+
+.standard-form .fieldset > #title-container {
+    display: inline-block;
+    width: 250px;
+
+    margin-right: 15px;
+}
+
+.standard-form .fieldset > #title-container h1 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 38px;
+
+    margin: 0;
+}
+
+.standard-form .fieldset > #field-container {
+    flex: 1;
+}
+
+/*
+Field Line
+*/
+
+.standard-form .field-line {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.standard-form .field-line.with-label {
+    margin-bottom: calc(32px - 19px) !important; // label height
+}
+
+.standard-form .no-margin {
+    margin: 0;
+}
+
+// Reduced Margin (for single fields)
+
+.standard-form .field-ine.reduced-margin {
+    margin-bottom: 15px;
+}
+
+// With Button
+
+.standard-form .field-line.with-button {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+/*
+Labels
+*/
+
+.standard-form label { // Total height: 19px;
+    margin-top: 5px;
+    display: block;
+
+    font-size: 11px;
+    font-style: italic;
+    color: $text-grey;
+
+    min-height: 14px;
+
+    line-height: 14px;
+}
+
+.standard-form label.optional {
+    font-style: italic;
+}
+
+/*
+Text input Field
+*/
+
+.standard-form input[type=text] {
+    background-color: $background-light;
+    line-height: 14px;
+
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-grey;
+
+    width: calc(100% - 22px);
+
+    border-radius: 2px;
+    border: 1px solid $light-grey;
+    box-shadow: inset 0 0 3px 0.5px rgba(0, 0, 0, .20);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/*
+Text Area
+*/
+
+.standard-form textarea {
+    background-color: $background-light;
+    line-height: 14px;
+
+    padding: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-grey;
+    line-height: 1.5;
+
+    width: calc(100% - 22px);
+
+    border-radius: 2px;
+    border: 1px solid $light-grey;
+    box-shadow: inset 0 0 3px 0.5px rgba(0, 0, 0, .20);
+
+    resize: vertical;
+
+    &:focus {
+        outline: none;
+    }
+}

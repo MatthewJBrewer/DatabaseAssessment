@@ -1,0 +1,9 @@
+{
+    "require": {
+        "webmozart/assert": "^1.4",
+        "paragonie/random-lib": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {"DatabaseExample\\": "lib/DatabaseExample"}
+    }
+}

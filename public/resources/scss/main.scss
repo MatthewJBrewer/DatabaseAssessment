@@ -1,0 +1,49 @@
+/*
+
+Main SCSS File
+
+This is the SCSS file responsible for importing all of the others. This is only file
+that should be compiled into CSS.
+
+Matthew Brewer - 7/24/2019
+
+*/
+
+/*
+Imports
+*/
+
+@import "theme.scss";
+
+// Mixins
+@import "mixins/clearfix.scss";
+
+// Elements
+
+@import "elements/container.scss";
+@import "elements/form.scss";
+@import "elements/button.scss";
+
+// Pages
+@import "pages/index.scss";
+
+/*
+Top-Level Styles
+*/
+
+body {
+    margin: 0;
+
+    background-color: $background-light;
+
+    font-family: 'Roboto', sans-serif;
+    color: $text-black;
+}
+
+/*
+Clearfix
+*/
+
+.clearfix {
+    @include clearfix;
+}
